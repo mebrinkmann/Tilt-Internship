@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #483f65;
+    color: #d2cfcf;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    width: 50%;
+}
+
+/* Navigation Bar*/
+nav ul {
+    list-style-type: none;
+    gap: 2em;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a,
+nav ul li button {
+    color: #9f3c3c;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*Discord Button*/
+#discord-button {
+    background-color: #4e63b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: wiggle 2s infinite;
+    
+}
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+/*Carousel Styling*/
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+}
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+.slide-item:first-child {
+    display: block;
+}
+
+/* information about the game's proportions */
+.game-details {
+    text-align: center;
+}
+
+.game-details img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.small-capsule {
+    width: 231px;
+    height: 87px;
+}
+
+.header-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.portrait-art {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.game-details h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.game-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.game-details .btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #c9e9e6;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
