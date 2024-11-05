@@ -1,74 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch the JSON data
     fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            const slidesContainer = document.getElementById('slide-viewer');
-            const slides1 = data.topUnreleasedIndieGamesThisWeek;
-            const slides2 = data.trendingUnreleasedIndieGamesThisWeek;
-            const slides3 = data.featuredUnreleasedIndieGames;
-            const slides4 = data.trendingFreeIndieGames;
-            const slides5 = data.trendingIndieGamesOnSale;
-            const slides6 = data.trendingIndieGamesFullPrice;
-            console.log('Fetched data:', data); // Check if data is fetched correctly
-            
-            // Populate each carousel
-            populateCarousel('unreleased-this-week', slides1);
-            populateCarousel('trending-this-week', slides2);
-            populateCarousel('featured-unreleased', slides3);
-            populateCarousel('trending-free', slides4);
-            populateCarousel('trending-sale', slides5);
-            populateCarousel('full-price', slides6);
-        })
-        .catch(error => {
-            console.error('Error fetching JSON data:', error);
-        });
+    .then(response => {
+        console.log(response); // Log the response object
+        return response.json(); // Parse the response as JSON
+    })
+    .then(data => {
+        // Handle data
+    })
+    .catch(error => {
+        console.error('Error fetching JSON data:', error);
+    });
 });
 
 // Function to populate the carousels
-function populateCarousel(carouselId, appIds) {
+function populateCarousel(carouselId, slidesHtml) {
     const carousel = document.getElementById(carouselId).querySelector('.slide-group');
-    if (!carousel || !appIds || appIds.length === 0) return;
+    if (carousel && slidesHtml && slidesHtml.length > 0) {
+        carousel.innerHTML = slidesHtml.join(''); // Insert HTML slides into carousel
+    }
+}
 
     // Create a document fragment to batch append elements
     const fragment = document.createDocumentFragment();
-
-    // Append the fragment to the carousel at once
-    carousel.appendChild(fragment);
-}
-
-appIds.forEach((appId, index) => {
-        forEach((appId, index) => {
-        const slideItem = document.createElement('div');
-        slideItem.classList.add('slide-item');
-        slideItem.id = `slide-${index}`;
-
-        forEach(appId => {
-            slide-item.innerHTML`
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/capsule_231x87.jpg" alt="Game ${appId}" loading="lazy">
-            <div class="carousel-info">
-                <h4>Loading...</h4>
-                <p>Loading description...</p>
-                <a href="https://store.steampowered.com/app/${appId}/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
-            </div>
-            `;
-        });
-
-    slidesContainer.appendChild(slideItem);
-});
-
-    let currentIndex = 0;
-    
-    fragment.appendChild(item);
-
-    console.log(`Added item for ${appId} to ${carouselId}`); // Log when an item is added
-
-    // Fetch additional details for the game
-    fetchGameDetails(appId, item);
-});
-
-// Append the fragment to the carousel at once
-carousel.appendChild(fragment);
 
 // Function to fetch game details
 function fetchGameDetails(appId, item) {
@@ -99,7 +52,7 @@ function fetchGameDetails(appId, item) {
 }
 
 // Carousel Script
-$('.slider').each(function() {
+$('.slide-viewer').each(function() {
     var $this   = $(this);
     var $group  = $this.find('.slide-group');
     var $slides = $this.find('.slide-item')
