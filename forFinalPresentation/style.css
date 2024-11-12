@@ -7,7 +7,7 @@ body {
 
 /* Header */
 header {
-    background-color: #f5c711ad;
+    background-color: #333;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ nav ul li {
 }
 nav ul li a,
 nav ul li button {
-    color: #000000;
+    color: #fff126;
     text-decoration: none;
     background: none;
     cursor: pointer;
