@@ -7,7 +7,7 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #f5c711ad;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ nav ul li {
 }
 nav ul li a,
 nav ul li button {
-    color: #9f3c3c;
+    color: #000000;
     text-decoration: none;
     background: none;
     cursor: pointer;
@@ -52,7 +52,9 @@ nav ul li button {
 .carousel {
     position: relative;
     overflow: hidden;
-    height: 210px;
+    height: 285px;
+    width: 600px;
+    left: 30%;
 }
 .slide-group {
     width: 100%;
@@ -69,12 +71,22 @@ nav ul li button {
     display: block;
 }
 
+.slide-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons */
+    gap: 5px;
+}
+
 /* information about the game's proportions */
-.game-details {
+.carousel-info {
     text-align: center;
 }
 
-.game-details img {
+.slide-item {
+    background-color: #947ce1;
+}
+
+.slide-item img {
     max-width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -99,28 +111,48 @@ nav ul li button {
     margin-bottom: 10px;
 }
 
-.game-details h4 {
+.slide-item h4 {
     font-size: 18px;
     margin: 10px 0;
     color: #333;
 }
 
-.game-details p {
+.slide-item p {
     font-size: 14px;
-    color: #666;
+    color: #404040;
     margin-bottom: 5px;
 }
+.slide-item h6 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #303030;
+}
 
-.game-details .btn {
+.slide-item .btn {
     display: inline-block;
-    background-color: #4CAF50;
-    color: #c9e9e6;
+    background-color: #f5c711;
+    color: #000000;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
 }
+
+#trendingIndieGamesOnSale h5 {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    color: #303030;
+}
+
+#trendingIndieGamesOnSale h6 {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    color: #393939;
+    text-decoration: line-through;
+    text-decoration-color: #ff0000;
+}
+
 
 /* Footer */
 footer {

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieGame.Fan</title>
+    <link rel="icon" type="image" href="IGFlogo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <a href="startup.html">
+                <img src="IndieGameFanBannerLogoTransparent.png" alt="IndieGame.Fan" class="logo">
+            </a>
+        <nav>
+            <ul>
+                <li><a href="startup.html">Home</a></li>
+                <li><button id="discord-button">Join Discord</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Wishlist Section-->
+        <section id="wishlist">
+            <h2>Wishlist</h2>
+            <h3>Top Unreleased Indie Games Coming Out This Week</h3>
+            <div class="carousel" id="topUnreleasedIndieGamesThisWeek">
+                <div class="slide-group">
+                    <div class="slide-item">
+                        <div class="carousel-info">
+                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1585180/capsule_231x87.jpg" alt="Game 1585180" loading="lazy">
+                            <h4>Drova - Forsaken Kin</h4>
+                            <p>Drova is an Action-RPG that marries the dark grim tones of its genre with the mysticism of Celtic mythology. Encounter a society where ancient restless spirits and divided factions battle for dominance. Uncover forgotten abilities and unravel the secrets of a past shrouded in mystery.</p>
+                            <a href="https://store.steampowered.com/app/1585180/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+            <h3>Top Unreleased Indie Games Trending This Week</h3>
+            <div class="carousel" id="trendingUnreleasedIndieGamesThisWeek"> 
+                <div class="slide-group">
+                    <div class="slide-item">
+                        <div class="carousel-info">
+                            <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3097560/de5fadeac50760c4cb15ccd0d2b14a8662f00b75/capsule_231x87.jpg?t=1728990434"" loading="lazy">
+                            <h4>Liar's Bar</h4>
+                            <p>Immerse yourself in online multiplayer action in a dubious bar where the games are as dangerous as its patrons. Sit down at a table of 4 people and test your skills in &quot;Liar's Bones&quot; and &quot;Liar's Card Deck&quot;, where lies and bluffing are the key to victory. Ready to spend the night at Liar's Bar?</p>
+                            <a href="https://store.steampowered.com/app/3097560/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+            <h3>Featured Unreleased Indie Games</h3> 
+        </section>
+        <!-- Purchase Section -->
+        <section id="purchase">
+            <h2>Purchase</h2>
+            <h3>Top Trending Free Indie Games</h3>
+            <div class="carousel" id="trendingFreeIndieGames">
+                <div class="slide-group">
+                    <div class="slide-item">
+                        <div class="carousel-info">
+                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2709570/capsule_231x87.jpg" alt="Game 2709570" loading="lazy">
+                            <h4>Supermarket Together</h4>
+                            <p>The multiplayer supermarket has arrived to your neighbourhood for free! Stock your shop space, unlock perks and franchises, hire employees or chase those pesky shoplifters. The more players, the more action!</p>
+                            <h6>FREE!</h6>
+                            <a href="https://store.steampowered.com/app/2709570/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+            <h3>Top Trending Indie Games on Sale</h3>
+            <div class="carousel" id="trendingIndieGamesOnSale">
+                <div class="slide-group">
+                    <div class="slide-item">
+                        <div class="carousel-info">
+                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1574820/capsule_231x87.jpg" alt="Game ${appId}" loading="lazy">
+                            <h4>Until Then</h4>
+                            <p>A fateful meeting sets off a chain reaction, upending Mark's life. People disappear and memories prove unreliable. Uncover a hidden truth with Mark and his friends in this narrative adventure and race to unravel the mystery before it's too late.</p>
+                            <h5>$14.99</h5>
+                            <h6>$19.99</h6>
+                            <a href="https://store.steampowered.com/app/${appId}/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+            <h3>Top Trending Indie Games for Full Price</h3>
+            <div class="carousel" id="trendingIndieGamesFullPrice">
+                <div class="slide-group">
+                    <div class="slide-item">
+                        <div class="carousel-info">
+                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/413150/capsule_231x87.jpg" alt="Game 413150" loading="lazy">
+                            <h4>Stardew Valley</h4>
+                            <p>You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?</p>
+                            <h6>$14.99</h6>
+                            <a href="https://store.steampowered.com/app/413150/?curator_clanid=44087493" target="_blank" class="btn">View on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 <br> IndieGame.Fan by Tilt Games</p>
+    </footer>
+    
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
